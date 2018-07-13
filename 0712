@@ -1,0 +1,48 @@
+（1/2）. import java.io.FileReader;
+import java.io.BufferedReader;
+class order{
+	void menu()throws Exception{
+	
+		FileReader fReader=new FileReader("d:/Order.txt");
+	
+		BufferedReader bReader=new BufferedReader(fReader);
+		String str=null; 
+		while((str=bReader.readLine())!=null){
+			System.out.println(str);
+		}
+		bReader.close(); fReader.close();
+	}
+}
+public class T0712 {
+	public static void main(String[] args) throws Exception{
+		order m=new order();
+		 m.menu();
+/*(第一题)FileReader fReader=new FileReader("d:/Order.txt");
+		BufferedReader bReader=new BufferedReader(fReader);
+		String str=null; 
+		while((str=bReader.readLine())!=null){
+			System.out.println(str);
+		}
+		bReader.close(); fReader.close();（第一题）*/
+
+	}
+}
+
+
+（3）. import java.io.FileReader;
+import java.io.BufferedReader;
+class order{
+	void menu()throws Exception{
+	
+		FileReader fReader=new FileReader("d:/Order.txt");
+	
+		BufferedReader bReader=new BufferedReader(fReader);
+		String str=null; 
+		while((str=bReader.readLine())!=null){
+			String[]s=str.split(",");
+			System.out.println(s[1]);
+		}
+		bReader.close(); 
+	}
+}
+
